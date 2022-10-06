@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# Created by: Lloyd Najac
+# Created on: October 6 2022
+# This program asks the user for the based edge and height of an hexagonal pyramid in mm. It then 
+# calculates and displays the surface area and volume of an hexagonal pyramid.
+
+import math
+
+def main():
+    # ask the user for based edge and height
+    print("Today we will calculate the surface area and")
+    print("volume of a hexagonal pyramid.")
+    basededge = int(input("Enter the based edge (mm): "))
+    height = int(input("Enter the height (mm): "))
+    
+    # calculate the volume and surface area using the following formulas
+    volume = math.sqrt (3)/2 * basededge**2 * height
+    surface_area = 3 * math.sqrt(3)/2 * basededge**2 + 3 * basededge * math.sqrt(height**2 + (3 * basededge**2/4))
+
+    # display the volume and surface area to user
+    print("")
+    print("volume = {} mm^3". format (volume))
+    print("surface area = {} mm". format (surface_area))
+
+
+if __name__ == "__main__":
+  main()
